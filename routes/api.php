@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('blogs', \App\Http\Controllers\BlogController::class);
+
+Route::post('/register', [\App\Http\Controllers\Api\Auth\RegisterController::class, "store"]);
